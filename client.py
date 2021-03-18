@@ -36,7 +36,7 @@ def send_data(socket_num):
 			closing_file(f)
 			f = opening_file(month_of = str(dt.now().month) + '_' + str(dt.now().year) + '.csv')
 		
-		f = opening_file(month_of)
+		
 		
 		data = s.recv(1024).decode('utf-8')
 		#print('data: ', data[-1])
@@ -54,7 +54,7 @@ def send_data(socket_num):
 				writing_to_file(k, session_string)
 				counter = 0
 		
-		if(((counter % 30) == 0) and counter != 0):
+		if(((counter % 10) == 0) and counter != 0):
 			closing_file(f)
 			g = open('notification.ps1', 'w')
 			hour = math.floor(counter/60)
@@ -69,7 +69,7 @@ def send_data(socket_num):
 			
 		#print(counter)	
 						
-		
+		f = opening_file(month_of)
 		writing_to_file(f, str(data))
 		closing_file(f)
 		
