@@ -54,7 +54,7 @@ def send_data(socket_num):
 				writing_to_file(k, session_string)
 				counter = 0
 		
-		if(((counter % 10) == 0) and counter != 0):
+		if(((counter % 30) == 0) and counter != 0):
 			closing_file(f)
 			g = open('notification.ps1', 'w')
 			hour = math.floor(counter/60)
