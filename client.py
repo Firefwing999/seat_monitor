@@ -61,7 +61,7 @@ def send_data(socket_num):
 			minute = counter % 60
 			stringTemp1 = 'New-BurntToastNotification -Text "You have been sitting for '
 			stringTemp2 = ' hour(s) and '
-			stringTemp3 = ' minutes straight " -AppLogo butt.jpeg'
+			stringTemp3 = ' minutes straight "
 			g.write(stringTemp1 + str(hour) + stringTemp2 + str(minute) + stringTemp3)
 			g.close()
 			
